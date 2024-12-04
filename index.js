@@ -1,17 +1,14 @@
 import inquirer from 'inquirer';
 import pkg from 'pg';
-import dotenv from 'dotenv';
-
-dotenv.config();
 
 const { Client } = pkg;
 
 // Create a connection to the PostgreSQL database
 const db = new Client({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME
+    host: 'localhost',
+    user: 'postgres',
+    password: '3th@NJohn7',
+    database: 'employeetracker_db'
 });
 
 db.connect(err => {
