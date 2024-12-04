@@ -23,8 +23,8 @@ CREATE TABLE Role (
     id SERIAL PRIMARY KEY,
     title VARCHAR(30) UNIQUE NOT NULL,
     salary DECIMAL NOT NULL,
-    deparment_id INTEGER NOT NULL
-    FOREIGN KEY (deparment_id) REFERENCES Department(id) ON DELETE CASCADE
+    department_id INTEGER NOT NULL,
+    FOREIGN KEY (department_id) REFERENCES Department(id) ON DELETE CASCADE
 );
 
 CREATE TABLE Employee (
@@ -32,7 +32,7 @@ CREATE TABLE Employee (
     first_name VARCHAR(30) NOT NULL,
     last_name VARCHAR(30) NOT NULL,
     role_id INTEGER NOT NULL,
-    manager_id INTEGER
+    manager_id INTEGER,
     FOREIGN KEY (role_id) REFERENCES Role(id) ON DELETE CASCADE,
-    FOREIGN KEY (manager_id) REFERENCES Employee(id) ON DELETE SET NULL
+    FOREIGN KEY (manager_id) REFERENCES Employee(role_id) ON DELETE SET NULL
 );
