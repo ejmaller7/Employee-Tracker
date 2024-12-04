@@ -21,7 +21,6 @@
   Anyone wanting to use this repo should know that in order to use it, you need to run the command 'node index.js' where you will be brought to a selection screen where you can choose what you would like to do in regard to the database and its choices.
 
   ## License
-  ## License
   [MIT License](https://opensource.org/licenses/MIT)
 
   ## Contributing
