@@ -9,9 +9,9 @@ const { Client } = pkg;
 // Create a connection to the PostgreSQL database
 const db = new Client({
     host: process.env.DB_HOST,
-    user: process.env.DB_USER, // Replace with your PostgreSQL username
-    password: process.env.DB_PASSWORD, // Replace with your PostgreSQL password
-    database: process.env.DB_NAME // Replace with your PostgreSQL database name
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME
 });
 
 db.connect(err => {
